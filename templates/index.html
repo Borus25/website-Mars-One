@@ -6,22 +6,22 @@
         <h2>Action # {{ loop.index }}</h2>
         <table>
           <tr>
-            <th scope="col">Title of activity</th>
-            <th scope="col">Team leader</th>
-            <th scope="col">Duration</th>
-            <th scope="col">List of collaborators</th>
-            <th scope="col">Is finished</th>
+            <th scope="col" style="background-color:#807f80" width="300" align="center" height="50">Title of activity</th>
+            <th scope="col" style="background-color:#807f80" align="center" height="50">Team leader</th>
+            <th scope="col" style="background-color:#807f80" width="150" align="center" height="50">Duration</th>
+            <th scope="col" style="background-color:#807f80" align="center" height="50">List of collaborators</th>
+            <th scope="col" style="background-color:#807f80" align="center" height="50">Is finished</th>
           </tr>
 
           <tr>
-            <td scope="col" style="background-color:#07e4f8">{{ job.job }}</td>
-            <td scope="col" style="background-color:#07e4f8">{{ job.team_leader }}</td>
-            <td scope="col" style="background-color:#07e4f8">{{ job.work_size }} hours</td>
-            <td scope="col" style="background-color:#07e4f8">{{ job.collaborators }}</td>
+            <td scope="col" style="background-color:#07e4f8" width="300" height="50" align="center">{{ job.job }}</td>
+            <td scope="col" style="background-color:#07e4f8" align="center" height="50">{{ job.team_leader }}</td>
+            <td scope="col" style="background-color:#07e4f8" width="150" align="center" height="50">{{ job.work_size }} hours</td>
+            <td scope="col" style="background-color:#07e4f8" align="center" height="50">{{ job.collaborators }}</td>
             {% if job.is_finished %}
-                <td scope="col" style="background-color:#07e4f8">Finished</td>
+                <td scope="col" style="background-color:#07e4f8" align="center" height="50">Finished</td>
             {% else %}
-                <td scope="col" style="background-color:#a85780">Not finished</td>
+                <td scope="col" style="background-color:#a85780" align="center" height="50">Not finished</td>
             {% endif %}
           </tr>
         </table>
