@@ -3,7 +3,7 @@
 {% block content %}
     <h1 style="text-align: center">Works log</h1>
     {% for job in jobs %}
-        <h2>Action # {{ loop.index }}</h2>
+        <h2>Action # {{ job.id }}</h2>
         <table>
           <tr>
             <th scope="col">Title of activity</th>
