@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+    <meta charset="UTF-8">
+    <h3>Фамилия: {{ answers['Фамилия'] }}</h3>
+    <h3>Имя: {{ answers['Имя'] }}</h3>
+    <h3>Образование: {{ answers['Образование'] }}</h3>
+    <h3>Профессия: {{ answers['Профессия'] }}</h3>
+    <h3>Пол: {{ answers['Пол'] }}</h3>
+    <h3>Мотивация: {{ answers['Мотивация'] }}</h3>
+    <h3>Готовы остаться на Марсе?: {{ answers['Готовы остаться на Марсе?'] }}</h3>
+{% endblock %}
