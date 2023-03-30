@@ -28,10 +28,10 @@
             {% endif %}
           </tr>
         </table>
-        {% if current_user.is_authenticated and (Jobs.user == current_user == 1 or Jobs.user == current_user) %}
+        {% if current_user.is_authenticated and (job.user == current_user == 1 or job.user == current_user) %}
                 <div>
-                    <a href="/job/{{ item.id }}" class="btn btn-warning">Edit</a>
-                    <a href="/job_delete/{{ item.id }}" class="btn btn-danger">Delete</a>
+                    <a href="/job/{{ job.id }}" class="btn btn-warning">Edit</a>
+                    <a href="/job_delete/{{ job.id }}" class="btn btn-danger">Delete</a>
                 </div>
             {% endif %}
         {% if not loop.last %}
