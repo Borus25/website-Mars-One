@@ -1,7 +1,12 @@
 from flask import Flask, render_template, redirect, request, abort
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 
+<<<<<<< HEAD
 from forms.news import NewsForm
+=======
+from data.jobs import Jobs
+from forms.job import JobForm
+>>>>>>> 6c8cd175c284fffa25e89f744ff9781c01281716
 from forms.user import RegisterForm, LoginForm
 from data.news import News
 from data.users import User
