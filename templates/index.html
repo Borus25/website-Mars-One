@@ -2,8 +2,11 @@
 
 {% block content %}
     <h1 style="text-align: center">Works log</h1>
+    {% if current_user.is_authenticated %}
+        <a href="addjob" class="btn btn-secondary">Add job</a>
+    {% endif %}
     {% for job in jobs %}
-        <h2>Action # {{ job.id }}</h2>
+        <h2>Action # {{ loop.index }}</h2>
         <table>
           <tr>
             <th scope="col" style="background-color:#807f80" width="300" align="center" height="50">Title of activity</th>
@@ -25,6 +28,12 @@
             {% endif %}
           </tr>
         </table>
+        {% if current_user.is_authenticated and (Jobs.user == current_user == 1 or Jobs.user == current_user) %}
+                <div>
+                    <a href="/job/{{ item.id }}" class="btn btn-warning">Edit</a>
+                    <a href="/job_delete/{{ item.id }}" class="btn btn-danger">Delete</a>
+                </div>
+            {% endif %}
         {% if not loop.last %}
             <br>
         {% endif %}
