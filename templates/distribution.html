@@ -1,9 +1,0 @@
-{% extends "base.html" %}
-
-{% block content %}
-    <meta charset="UTF-8">
-    <h2>Размещение по каютам</h2>
-    {% for kauta in sp %}
-    {{ kauta }} - Каюта № {{ loop.index }} {% if loop.first %} - капитан корабля<br> {% elif not loop.last %} <br> {% endif %}
-    {% endfor %}
-{% endblock %}
