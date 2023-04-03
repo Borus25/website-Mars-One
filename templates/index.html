@@ -28,7 +28,7 @@
             {% endif %}
           </tr>
         </table>
-        {% if current_user.is_authenticated and (job.user == current_user == 1 or job.user == current_user) %}
+        {% if current_user.is_authenticated or (current_user.is_authenticated and (job.user == current_user == 1 or job.user == current_user)) %}
                 <div>
                     <a href="/job/{{ job.id }}" class="btn btn-warning">Edit</a>
                     <a href="/job_delete/{{ job.id }}" class="btn btn-danger">Delete</a>
